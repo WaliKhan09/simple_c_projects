@@ -3,7 +3,7 @@
 Following is a list of programs to do:-
 
 <ol>
-<li>Count: Letter Count, Word Count, Line Count and Paragraph Count.</li>
+<li>Count: Letter Count, Word Count, Line Count, Paragraph Count, Comma Count, Space Count and Special Symbols Count.</li>
 <li>Count with options: Letter Count, Word Count, Line Count and Paragraph Count.
   <ol>
     <li>Ask for File</li>
@@ -11,6 +11,8 @@ Following is a list of programs to do:-
     <li>Restrict and basic validation</li>
   </ol>
 </li>
-<li>Third item</li>
-<li>Fourth item</li>
+<li>CSV read and write</li>
+<li>CSV read and write into multiple file</li>
+<li>CSV read and write columns to a specific file</li>  
+<li>Binary Read and Binary write</li>
 </ol> 
