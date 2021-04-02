@@ -3,7 +3,7 @@
 Following is a list of programs to do:-
 
 <ol>
-<li>Count: Letter Count, Word Count, Line Count, Paragraph Count, Comma Count, Space Count and Special Symbols Count.</li>
+<li>Count: Letter Count, Word Count, Line Count, Paragraph Count, Space Count and Special Symbols Count/Characters.</li>
 <li>Count with options: Letter Count, Word Count, Line Count and Paragraph Count.
   <ol>
     <li>Ask for File</li>
