@@ -6,6 +6,7 @@ void file(void);
 int charcount(char ch);
 int linecount(char ch);
 int spacecount(char ch);
+int wordcount(char ch, int state);
 
 int main()
 {
@@ -15,9 +16,9 @@ int main()
 void file(void)
 {
     char ch;
-    int charc, linec, spacec;
+    int charc, linec, spacec, word, state = OUT;
     FILE *fl;
-    fl = fopen("Lorem1.txt", "r");
+    fl = fopen("Lorem.txt", "r");
 
     while ((ch = fgetc(fl)) != EOF)
     {
@@ -36,10 +37,22 @@ void file(void)
         {
             ++spacec;
         }
+        wordcount(ch, state);
+        if (wordcount(ch, state) == 0)
+        {
+            state = OUT;
+        }
+        else if (wordcount(ch, state) == 1)
+        {
+            state = IN;
+            ++word;
+        }
+        
     }
     printf("Char cout : %d\n", charc);
     printf("Space cout : %d\n", spacec);
     printf("Line cout : %d\n", linec);
+    printf("Word Count : %d\n", word);
 
 }
 int charcount(char ch)
@@ -65,5 +78,13 @@ int linecount(char ch)
     {
         return 1;
     }
-
+}
+wordcount(char ch, int state){
+    if (ch == ' ' || ch == '\n' || ch == '\t' || ch == '.'){
+        return 0;
+    }
+    else if (state == OUT)
+    {
+        return 1;
+    }
 }
